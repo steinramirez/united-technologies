@@ -8,7 +8,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
+  --font-color: 0 , 98 , 114;
+  --font-color2: 168 , 202 , 203;
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -82,6 +83,7 @@
 html,
 body {
   max-width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -99,9 +101,41 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.bg-navBar{
+  background: rgb(251,233,196)
+}
+.bg-green{
+  background: rgb(59,64,48);
+  transition-duration: 1s;
+}
 
+.text-aqua {
+  color:rgb(59,64,48)
+}
+hover:text-aqua {
+  color:rgb(87, 96, 68)
+}
+.text-beige{
+  color: rgb(251,233,196)
+}
+.h-content{
+  height:90vh;
+  background:rgb(251,233,196);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.bg-united{
+  background:url('../pages/components/assets/logo.png'), rgb(251,233,196);
+  background-repeat: no-repeat;
+  background-position: right 0 bottom -100px;
+  
+}
+@media only screen and (max-width: 767px) {
+  .bg-united {
+    background-image: none;
   }
 }
