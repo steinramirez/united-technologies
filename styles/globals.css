@@ -108,7 +108,12 @@ a {
   background: rgb(59,64,48);
   transition-duration: 1s;
 }
-
+.bg-orange {
+  background:rgb(255, 153, 0);
+}
+.text-orange{
+  color:rgb(255, 153, 0)
+}
 .text-aqua {
   color:rgb(223, 223, 222)
 }

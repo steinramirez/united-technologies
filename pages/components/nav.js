@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react'
+
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -16,7 +17,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Logo  from  '../components/assets/logo.webp'
+import Logo from '../components/assets/logo.webp'
 
 const solutions = [
   {
@@ -89,17 +90,17 @@ export default function Navbar() {
             <a href="#">
               <span className="sr-only">United Technologies</span>
               <Image
-      src={Logo}
-      alt="United Technologies"
-      width={50}
-      height={50}
-      quality={85}
-      loading="eager"
-    />
+                src={Logo}
+                alt="United Technologies"
+                width={50}
+                height={50}
+                quality={85}
+                loading="eager"
+              />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-aqua hover:bg-orange-100 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-orange p-2 text-aqua hover:bg-orange-100 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -150,12 +151,12 @@ export default function Navbar() {
                             </a>
                           ))}
                         </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 bg-green">
+                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 bg-united">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
                               <a
                                 href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-beige hover:bg-orange-600"
+                                className="-m-3 flex items-center rounded-md p-3 text-white-100 font-medium hover:bg-orange-600"
                               >
                                 <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400 " aria-hidden="true" />
                                 <span className="ml-3">{item.name}</span>
@@ -224,11 +225,11 @@ export default function Navbar() {
                         </div>
                         <div className="bg-green px-5 py-5 sm:px-8 sm:py-8">
                           <div>
-                            <h3 className="text-base font-medium text-beige">Recent Posts</h3>
+                            <h3 className="text-base font-medium text-white">Recent Posts</h3>
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
-                                <li key={post.id} className="truncate text-base text-beige">
-                                  <a href={post.href} className="font-medium text-beige hover:text-orange-700">
+                                <li key={post.id} className="truncate text-base text-white">
+                                  <a href={post.href} className="font-medium text-white hover:text-orange">
                                     {post.name}
                                   </a>
                                 </li>
@@ -255,9 +256,7 @@ export default function Navbar() {
             </a>
             <a
               href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-green px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
-            >
-              Sign up
+              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700">Sign up
             </a>
           </div>
         </div>
@@ -277,14 +276,17 @@ export default function Navbar() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
+                  <Image
+                    src={Logo}
+                    alt="United Technologies"
+                    width={50}
+                    height={50}
+                    quality={85}
+                    loading="eager"
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -298,7 +300,7 @@ export default function Navbar() {
                       href={item.href}
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                     >
-                      <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
+                      <item.icon className="h-6 w-6 flex-shrink-0 text-orange-600" aria-hidden="true" />
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                     </a>
                   ))}
@@ -327,13 +329,13 @@ export default function Navbar() {
               <div>
                 <a
                   href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700"
                 >
                   Sign up
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <a href="#" className="text-orange hover:text-indigo-500">
                     Sign in
                   </a>
                 </p>
