@@ -14,7 +14,7 @@ export default function Home() {
         
         <meta name="description" content="United Technologies, a microweb service company located in USA" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/faviconut.ico" /> 
+        <link rel="icon" href="/favicon.ico" /> 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@1.x/dist/tailwind.min.css" />
        
 
