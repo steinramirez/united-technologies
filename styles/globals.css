@@ -102,7 +102,7 @@ a {
   text-decoration: none;
 }
 .bg-navBar{
-  background: rgb(251,233,196)
+  background: #1e2832;
 }
 .bg-green{
   background: rgb(59,64,48);
@@ -110,7 +110,7 @@ a {
 }
 
 .text-aqua {
-  color:rgb(59,64,48)
+  color:rgb(223, 223, 222)
 }
 hover:text-aqua {
   color:rgb(87, 96, 68)
@@ -129,7 +129,7 @@ hover:text-aqua {
 }
 
 .bg-united{
-  background:url('../pages/components/assets/logo.png'), rgb(251,233,196);
+  background:#1e2832;
   background-repeat: no-repeat;
   background-position: right 0 bottom -100px;
   

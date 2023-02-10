@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -15,7 +16,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Logo  from  '../components/assets/logo.png'
+import Logo  from  '../components/assets/logo.webp'
 
 const solutions = [
   {
@@ -87,11 +88,14 @@ export default function Navbar() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">United Technologies</span>
-              <img
-                className=""
-                src={Logo}
-                alt="United Technologies company"
-              />
+              <Image
+      src={Logo}
+      alt="United Technologies"
+      width={50}
+      height={50}
+      quality={85}
+      loading="eager"
+    />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">

@@ -4,7 +4,7 @@ export default function content(){
   return (<><div className="h-content flex items-center justify-center text-center bg-united">
     <p className="text-6xl text-aqua">United Technologies</p></div>
     <div className=" flex items-left justify-center text-center bg-white">
-     <section class="text-gray-600 body-font">
+     <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
     <div  className="flex flex-col text-center w-full mb-20">
       <h2  className="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1">UNISERVICES</h2>
@@ -16,7 +16,7 @@ export default function content(){
         <h2  className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Desarrollo de sitios web</h2>
         <p  className="leading-relaxed text-base mb-4">Creación de sitios web personalizados y responsivos que se adapten a cualquier dispositivo.</p>
         <a  className="text-yellow-500 inline-flex items-center">Más Info
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </a>
