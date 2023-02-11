@@ -112,7 +112,7 @@ a {
   background:rgb(255, 153, 0);
 }
 .text-orange{
-  color:rgb(255, 153, 0)
+  color:#ff9900;
 }
 .text-aqua {
   color:rgb(223, 223, 222)
@@ -143,4 +143,7 @@ hover:text-aqua {
   .bg-united {
     background-image: none;
   }
+}
+hover:text-orange{
+  color:rgb(255, 153, 0);
 }

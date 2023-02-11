@@ -223,7 +223,7 @@ export default function Navbar() {
                             </a>
                           ))}
                         </div>
-                        <div className="bg-green px-5 py-5 sm:px-8 sm:py-8">
+                        <div className="bg-united px-5 py-5 sm:px-8 sm:py-8">
                           <div>
                             <h3 className="text-base font-medium text-white">Recent Posts</h3>
                             <ul role="list" className="mt-4 space-y-4">
@@ -237,7 +237,7 @@ export default function Navbar() {
                             </ul>
                           </div>
                           <div className="mt-5 text-sm">
-                            <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                            <a href="#" className="font-medium text-orange hover:text-indigo-500">
                               View all posts
                               <span aria-hidden="true"> &rarr;</span>
                             </a>
