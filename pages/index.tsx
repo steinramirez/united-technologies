@@ -3,6 +3,9 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '../pages/components/nav'
 import Content from '../pages/components/content'
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react'
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -20,6 +23,11 @@ export default function Home() {
         <div>
           <Navbar />
           <Content />
+          <div className="App">
+            <TawkMessengerReact
+                propertyId="5880d66dbcf30e71ac11daaa"
+                widgetId="default"/>
+        </div>
         </div>
       </main>
       
