@@ -3,7 +3,6 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '../pages/components/nav'
 import Content from '../pages/components/content'
-import Tawkto from '../pages/components/chat-tawk'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <div>
           <Navbar />
           <Content />
-          <Tawkto />
         </div>
       </main>
       
