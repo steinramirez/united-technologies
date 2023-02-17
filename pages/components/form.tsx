@@ -3,20 +3,24 @@ import React, { useEffect } from 'react';
 
 const Form= () => {
   useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    script.onload = () => {
+      // Run loadTally function once script is loaded
+      loadTally();
+    };
+    document.body.appendChild(script);
+
+    // Define loadTally function
     const loadTally = () => {
       if (typeof Tally !== 'undefined') {
         Tally.loadEmbeds();
       } else {
-        const script = document.createElement('script');
-        script.src = 'https://tally.so/widgets/embed.js';
-        script.onload = () => Tally.loadEmbeds();
-        script.onerror = () => Tally.loadEmbeds();
-        document.body.appendChild(script);
+        console.error('Tally is not defined!');
       }
     };
-    loadTally();
   }, []);
-
   return (<div className='w-full bg-white justify-center relative h-form'>
     <iframe
     className='absolute'
@@ -24,9 +28,6 @@ const Form= () => {
       loading="lazy"
       width="65%"
       height="60%"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
       title="¿Cómo podemos ayudarte¡"
       style={{position:"absolute", transform:'translate(20%,20%)'}}
     ></iframe>
