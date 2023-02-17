@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react'
-
+import { useEffect, useState } from 'react';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -82,18 +82,19 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  
   return (
-    <Popover className="relative bg-navBar">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+    <Popover className="relative" style={{backgroundColor:'#1e2832'}} >
+      <div className="max-w sm:pr-2" >
+        <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10 pl-20 pr-20 sm:pl-10" >
+          <div className="flex justify-start  lg:w-0 lg:flex-1" >
             <a href="#">
               <span className="sr-only">United Technologies</span>
               <Image
                 src={Logo}
                 alt="United Technologies"
-                width={50}
-                height={50}
+                width={60}
+                height={60}
                 quality={85}
                 loading="eager"
               />
@@ -111,14 +112,14 @@ export default function Navbar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-aqua' : 'text-aqua',
+                      open ? 'text-aqua-md' : 'text-aqua-md',
                       'group inline-flex items-center rounded-md text-base font-medium hover:text-aqua focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Servicios</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-aqua' : 'text-aqua',
+                        open ? 'text-aqua-md' : 'text-aqua-md',
                         'ml-2 h-5 w-5 group-hover:text-aqua'
                       )}
                       aria-hidden="true"
@@ -171,11 +172,14 @@ export default function Navbar() {
               )}
             </Popover>
 
-            <a href="#" className="text-base font-medium text-aqua hover:text-aqua">
-              Pricing
+            <a href="#" className="text-base font-medium text-aqua-md hover:text-aqua-md">
+              Nosotros
             </a>
-            <a href="#" className="text-base font-medium text-aqua hover:text-aqua">
-              Docs
+            <a href="#" className="text-base font-medium text-aqua-md hover:text-aqua-md">
+              FAQ
+            </a>
+            <a href="#" className="text-base font-medium text-aqua-md hover:text-aqua-md">
+              Contacto
             </a>
 
             <Popover className="relative">
@@ -183,7 +187,7 @@ export default function Navbar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-aqua' : 'text-aqua',
+                      open ? 'text-aqua-md' : 'text-aqua-md',
                       'group inline-flex items-center rounded-md text-base font-medium hover:text-aqua focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
@@ -250,15 +254,7 @@ export default function Navbar() {
               )}
             </Popover>
           </Popover.Group>
-          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-orange-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700">Sign up
-            </a>
-          </div>
+          
         </div>
       </div>
 

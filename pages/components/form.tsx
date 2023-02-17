@@ -1,0 +1,39 @@
+
+import React, { useEffect } from 'react';
+
+const Form= () => {
+  useEffect(() => {
+    const loadTally = () => {
+      if (typeof Tally !== 'undefined') {
+        Tally.loadEmbeds();
+      } else {
+        const script = document.createElement('script');
+        script.src = 'https://tally.so/widgets/embed.js';
+        script.onload = () => Tally.loadEmbeds();
+        script.onerror = () => Tally.loadEmbeds();
+        document.body.appendChild(script);
+      }
+    };
+    loadTally();
+  }, []);
+
+  return (<div className='w-full bg-white justify-center relative h-form'>
+    <iframe
+    className='absolute'
+      data-tally-src="https://tally.so/embed/wL9DNy?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="65%"
+      height="60%"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="¿Cómo podemos ayudarte¡"
+      style={{position:"absolute", transform:'translate(20%,20%)'}}
+    ></iframe>
+    </div>
+  );
+};
+//center this iframe on the middle of a full div width on the x and y axis 
+export default Form;
+
+
